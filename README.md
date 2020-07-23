@@ -12,7 +12,17 @@ This is not a perfect solution. Unfortunatley, people can't collaborate on a qua
 
 ## Survey Design
 
-Survey is made up of the 3 parts: (1) a screening section where respondents select the information that they can provide, (2) the survey questions, and (3) a referal section where respondents can refer a colleague to provide the information that they could not.
+The survey design implemented is made up of the 3 parts: (1) a screening section where respondents select the information that they can provide, (2) the survey questions, and (3) a referal section where respondents can refer a colleague to provide the information that they could not.
 
-<img src= "https://github.com/jvanzalk/b2b-surveys/blob/master/images/survey_design.JPG" width="700">
+<img src= "https://github.com/jvanzalk/b2b-surveys/blob/master/images/survey_design.JPG" width="500">
+
+The screening section contains display logic so that respondents can only select topics that their company as a whole hasn't completed:
+
+<img src= "https://github.com/jvanzalk/b2b-surveys/blob/master/images/topic_question.JPG" width="500">
+
+The survey flow calls out embedded data that comes from customized survey links which control what the respondent sees. For example, if a respondent completes topic 1 (or T1) and refers a colleague to complete topic 2, the colleague will be sent a survey link with T1_Completed=1. The display logic will then prevent them from answering the questions under topic 1 too. 
+
+<img src= "https://github.com/jvanzalk/b2b-surveys/blob/master/images/survey_flow.JPG" width="500">
+
+
 
